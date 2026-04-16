@@ -985,7 +985,7 @@ font-weight: 600;
 
 /* .......@Media....... */
 
-/* @media(max-width:1280px){
+@media(max-width:1280px){
 
 header{
   padding: 1rem 2rem;
@@ -1035,14 +1035,14 @@ header{
   }
   .input-box i{
     display: none;
-    /* font-size: 2rem; 
-  } */
-  /* .grid{
+    /* font-size: 2rem; */
+  }
+  .grid{
     grid-template-columns: repeat(1, 1fr);
   }
   .experience-info{
     width: 70VW;
-  } */
+  }
 
   /* footer{
     position: relative;
@@ -1051,10 +1051,10 @@ header{
 
 
   
-/* } */
+}
 
 
-/*
+
 @media(max-width:600px){
   header #menu-icon{
     display: block;
@@ -1070,10 +1070,10 @@ header{
     flex-direction: column;
     text-align: center;
     background: rgba(0, 0, 0, 0.4);
-   ' /* background: rgba(0, 0, 0, 0.9); */
-    /* border-radius: 3rem;
-    display: none;*/ 
-  /* }
+    /* background: rgba(0, 0, 0, 0.9); */
+    border-radius: 3rem;
+    display: none;
+  }
   .nav-links li{
     margin-top: 1rem;
     padding: 0.5rem;
@@ -1145,300 +1145,4 @@ header{
             .about-text p {
                 font-size: 1rem;
             }
-        } */ 
-
-
-
-
-        /* ========== RESPONSIVE DESIGN (احترافي لجميع الشاشات) ========== */
-
-/* Tablets and smaller desktops (من 769px إلى 1024px) */
-@media screen and (max-width: 1024px) {
-  section {
-    padding: 5rem 5%;
-  }
-
-  .header {
-    padding: 0.6rem 1.5rem;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-  }
-
-  .nav-links {
-    gap: 1.5rem;
-  }
-
-  .about-container {
-    gap: 2.5rem;
-  }
-
-  .about img {
-    width: 280px;
-    height: 280px;
-  }
-
-  .info-box h1 {
-    font-size: 3rem;
-  }
-}
-
-/* Mobile landscape and large phones (حتى 768px) */
-@media screen and (max-width: 768px) {
-  /* Header adjustments for mobile */
-  .visit-btn {
-    display: none;
-  }
-
-  #menu-icon {
-    display: block;
-  }
-
-  .nav-links {
-    position: fixed;
-    top: 85px;
-    left: 0;
-    right: 0;
-    width: 90%;
-    max-width: 400px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.97);
-    backdrop-filter: blur(18px);
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 1rem;
-    border-radius: 36px;
-    box-shadow: 0 30px 45px -10px rgba(0,0,0,0.2);
-    gap: 1.5rem;
-    transform: translateY(-160%);
-    opacity: 0;
-    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.1), opacity 0.3s;
-    pointer-events: none;
-    z-index: 999;
-  }
-
-  body.dark-mode .nav-links {
-    background: rgba(15, 22, 38, 0.96);
-  }
-
-  .nav-links.active {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .nav-links li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .nav-links li a {
-    display: block;
-    padding: 12px 0;
-    font-size: 1.2rem;
-    border-radius: 48px;
-    background: #eef3ff;
-  }
-
-  body.dark-mode .nav-links li a {
-    background: #1d2b44;
-  }
-
-  /* Sections spacing */
-  section {
-    padding: 4rem 5%;
-  }
-
-  .section-title {
-    font-size: 2.2rem;
-  }
-
-  /* Home section */
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-  }
-
-  .about img {
-    width: 240px;
-    height: 240px;
-  }
-
-  .info-box h1 {
-    font-size: 2.5rem;
-  }
-
-  .info-box span {
-    font-size: 1.6rem;
-  }
-
-  /* About me */
-  .about-me {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-  }
-
-  .about-me img {
-    width: 240px;
-  }
-
-  .about-text p {
-    text-align: center;
-    font-size: 1.1rem;
-  }
-
-  /* Projects */
-  .projects-grid {
-    gap: 1.5rem;
-  }
-
-  /* Skills */
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Contact */
-  .contact-wrapper {
-    grid-template-columns: 1fr;
-    padding: 1.8rem;
-  }
-
-  .contact-header h1 {
-    font-size: 2.2rem;
-  }
-
-  .info-card {
-    padding: 1.5rem;
-  }
-
-  .social-links a {
-    width: 48px;
-    height: 48px;
-    font-size: 1.5rem;
-  }
-
-  /* Footer */
-  .footer ul {
-    gap: 1.5rem;
-  }
-}
-
-/* Small mobile devices (حتى 480px) */
-@media screen and (max-width: 480px) {
-  .header {
-    padding: 0.5rem 1.2rem;
-    width: 95%;
-  }
-
-  .logo {
-    font-size: 1.3rem;
-  }
-
-  #menu-icon {
-    font-size: 1.8rem;
-  }
-
-  .about img {
-    width: 200px;
-    height: 200px;
-  }
-
-  .info-box h1 {
-    font-size: 2rem;
-  }
-
-  .info-box h3 {
-    font-size: 1.5rem;
-  }
-
-  .btn-group {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  .socials i {
-    font-size: 1.8rem;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .projects-card {
-    padding: 1.5rem 1rem;
-  }
-
-  .skill-category {
-    padding: 1.5rem;
-  }
-
-  .category-header h3 {
-    font-size: 1.5rem;
-  }
-
-  .contact-wrapper {
-    padding: 1.2rem;
-  }
-
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    padding: 0.8rem;
-  }
-
-  .social-links {
-    gap: 15px;
-  }
-
-  .footer ul {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-}
-
-/* للشاشات الكبيرة جدًا (4K) - تحسين العرض */
-@media screen and (min-width: 1600px) {
-  section {
-    padding: 8rem 12%;
-  }
-
-  .about img {
-    width: 400px;
-    height: 400px;
-  }
-
-  .info-box h1 {
-    font-size: 4.5rem;
-  }
-
-  .info-box span {
-    font-size: 2.5rem;
-  }
-
-  .about-text p {
-    font-size: 1.4rem;
-  }
-}
-
-/* تحسينات للطباعة */
-@media print {
-  .header, .dark-mode-toggle, .visit-btn, .social-links, .btn-group {
-    display: none;
-  }
-  body {
-    background: white;
-    color: black;
-  }
-  section {
-    padding: 1rem;
-    page-break-inside: avoid;
-  }
-}
+        }
