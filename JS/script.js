@@ -142,3 +142,70 @@
             }
         });
 
+
+
+        // ----- Hamburger Menu (Responsive) -----
+const menuIcon = document.getElementById('menu-icon');
+const navLinks = document.querySelector('.nav-links');
+const header = document.querySelector('.header');
+
+function closeMenu() {
+  navLinks.classList.remove('active');
+  menuIcon.classList.remove('fa-times');
+  menuIcon.classList.add('fa-bars');
+}
+
+function openMenu() {
+  navLinks.classList.add('active');
+  menuIcon.classList.remove('fa-bars');
+  menuIcon.classList.add('fa-times');
+}
+
+if (menuIcon && navLinks) {
+  menuIcon.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navLinks.classList.contains('active') ? closeMenu() : openMenu();
+  });
+
+  // إغلاق القائمة عند النقر على أي رابط
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // إغلاق القائمة عند النقر خارجها
+  document.addEventListener('click', (e) => {
+    if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && e.target !== menuIcon) {
+      closeMenu();
+    }
+  });
+
+  // منع إغلاق القائمة عند النقر داخلها
+  navLinks.addEventListener('click', (e) => e.stopPropagation());
+}
+
+// ----- إخفاء الهيدر عند التمرير لأسفل (لمسة احترافية) -----
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+  const current = window.pageYOffset;
+  if (current > lastScroll && current > 120) {
+    header.style.transform = 'translate(-50%, -130%)';
+  } else {
+    header.style.transform = 'translate(-50%, 0)';
+  }
+  lastScroll = current;
+});
+
+// ----- التمرير السلس مع تعويض ارتفاع الهيدر (للاستجابة) -----
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href === "#" || href === "") return;
+    const target = document.querySelector(href);
+    if (target) {
+      e.preventDefault();
+      const offset = header ? header.offsetHeight + 20 : 80;
+      const position = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: position, behavior: 'smooth' });
+    }
+  });
+});
